@@ -1,0 +1,24 @@
+
+<img src="{% static 'library_11.avif' %}" class="img-fluid" alt="Library Image">
+
+
+<form method="get" action="{% url 'solved_p' %}" class="form-inline justify-content-center mt-3">
+  {{ form.query }}
+  <button class="btn btn-success ml-2" type="submit">Search</button>
+</form>
+
+
+{% if results %}
+  <div class="container mt-4">
+    <h4 class="text-center text-dark">Search Results</h4>
+    <ul class="list-group">
+      {% for pyq in results %}
+        <li class="list-group-item">
+          <strong>{{ pyq.title }}</strong> — {{ pyq.subject }} ({{ pyq.year }})
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% elif form.cleaned_data.query %}
+  <p class="text-center text-danger mt-4">No results found.</p>
+{% endif %}

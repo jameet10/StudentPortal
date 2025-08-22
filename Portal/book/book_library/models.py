@@ -10,4 +10,12 @@ class enrollmentdetail(models.Model):
         return self.name
 
 
+
+class PYQ(models.Model):
+    title = models.CharField(max_length=200)
+    subject = models.CharField(max_length=100)
+    year = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.title} ({self.year})"
   

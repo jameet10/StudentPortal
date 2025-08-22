@@ -1,6 +1,7 @@
 from django.shortcuts import render ,HttpResponse
 from datetime import datetime 
-from .models import enrollmentdetail 
+from .models import enrollmentdetail ,PYQ
+from .forms import SearchForm
 
 def index(request):
     return render(request, 'index.html')
@@ -21,8 +22,18 @@ def save_lib_e(request):
         email =request.POST.get('email')
         password =request.POST.get('password')
         Details=enrollmentdetail(name=name,email=email,password=password,date=datetime.today())
-        Details.save()
-
-
-    
+        Details.save()    
     return render(request,"lib_enrollment.html")
+def search_pyqs(request):
+    form = SearchForm()
+    results = []
+
+    if request.method == 'GET' and 'query' in request.GET:
+        form = SearchForm(request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            results = PYQ.objects.filter(title__icontains=query)
+
+    return render(request, 'pyqsresult.html', {'form':form, 'results':results})
+
+
