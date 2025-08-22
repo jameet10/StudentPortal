@@ -2,6 +2,10 @@ from django.urls import path
 from book_library import views
 from django.contrib import admin
 
+admin.site.site_header = "Library Admin"
+admin.site.site_title = "Srmcem Library Admin Portal"
+admin.site.index_title = "Welcome to Library "
+
 urlpatterns = [
     path("", views.index, name="book_library"),   
     path("library_availibility/", views.library_availibility, name="library_availibility"), 
