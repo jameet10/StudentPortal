@@ -1,4 +1,4 @@
 body{
-    background-image: url("{ % static 'images/srmgpc.jpg'% }");
+    background-image: url("images/srmgpc.jpg");
     background-size: cover;
 }
