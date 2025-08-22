@@ -57,22 +57,26 @@
           </li>
         </ul>
 
-         <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline my-2 my-lg-0">
+          {% comment %}
           <input
             class="form-control mr-sm-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
+          {% endcomment %} {% comment %}
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
             Search
           </button>
+          {% endcomment %}
         </form>
       </div>
     </nav>
     <form class="form-inline">
       <div class="form-group mb-2">
         <label for="staticEmail2" class="sr-only">Email</label>
+        {% comment %}
         <input
           type="text"
           readonly
@@ -80,7 +84,9 @@
           id="staticEmail2"
           value="User"
         />
+        {% endcomment %}
       </div>
+      {% comment %}
       <div class="form-group mx-sm-3 mb-2">
         <label for="inputPassword2" class="sr-only">Password</label>
         <input
@@ -90,6 +96,7 @@
           placeholder="User-id"
         />
       </div>
+      {% endcomment %} {% comment %}
       <button
         type="submit"
         class="btn mb-2"
@@ -97,7 +104,8 @@
       >
         Confirm identity
       </button>
-    </form> 
+      {% endcomment %}
+    </form>
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

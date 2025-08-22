@@ -1,22 +1,47 @@
 <!DOCTYPE html>
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Issue</title>
-</head>
-<body style="background-color: darkgrey;">
 
-    <h1> Here we issue book</h1>
-    <nav class="navbar navbar-light bg-light">
-  <form class="form-inline"> 
-    
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body style="background-color: darkgrey">
+    <div class="container mt-4">
+      <h1 class="text-center text-dark">Here we issue book</h1>
+    </div>  
 
-    <input class="form-control mr-sm-2" type="books" placeholder="books" aria-label="books">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="/static/library_3.avif" alt="Third slide">
+      <nav class="navbar navbar-dark bg-dark mt-4">
+        <form class="form-inline w-100 justify-content-center">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="books"
+            aria-label="books"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </nav>
+
+      <div class="carousel-item active mt-4">
+        <img
+          class="d-block w-100"
+          src="/static/library_3.avif"
+          alt="Third slide"
+        />
+      
     </div>
-   
-  </form>
-</nav>
-</body>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
