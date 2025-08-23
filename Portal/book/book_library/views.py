@@ -35,5 +35,3 @@ def search_pyqs(request):
             results = PYQ.objects.filter(title__icontains=query)
 
     return render(request, 'pyqsresult.html', {'form':form, 'results':results})
-
-

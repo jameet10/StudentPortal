@@ -1,8 +1,51 @@
 
-<img src="{% static 'library_11.avif' %}" class="img-fluid" alt="Library Image">
+{% comment %} <img src="{% static 'library_11.avif' %}" class="img-fluid" alt="Library Image"> {% endcomment %}
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
 
-<form method="get" action="{% url 'solved_p' %}" class="form-inline justify-content-center mt-3">
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body style="background-color: darkgrey">
+    <div class="container mt-4">
+      <h1 class="text-center text-dark">
+        PYQS
+      </h1>
+      
+      <h2 class="text-center text-dark">
+        "Every PYQ ever asked lives in my veins—I am the archive."
+      </h2>
+    </div>
+      
+          
+      </nav>
+
+      <div class="mt-4">
+        <img
+          class="img-fluid w-100"
+          src="/static/library_11.avif"
+          alt="Library Image"
+        />
+        <form class="form-inline w-100 justify-content-center" method="get" action="{% url 'search_pyqs' %}">
+        </form>
+      </div> 
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+<nav class="navbar navbar-dark bg-dark mt-4">
+<form method="get" action="{% url 'search_pyqs' %}" class="form-inline justify-content-center mt-3">
   {{ form.query }}
   <button class="btn btn-success ml-2" type="submit">Search</button>
 </form>
@@ -22,3 +65,4 @@
 {% elif form.cleaned_data.query %}
   <p class="text-center text-danger mt-4">No results found.</p>
 {% endif %}
+</nav>
