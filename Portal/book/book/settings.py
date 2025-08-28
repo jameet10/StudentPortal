@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-yc-sw$3wai3#u0eduz_y0tihc!6x4&wo0rh1s)_2)f$^6ot@di
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["studentportal-i0ki.onrender.com","localhost","127.0.0.1"]
 
 
 # Application definition
